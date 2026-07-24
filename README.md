@@ -2,12 +2,6 @@
 
 A high-performance, responsive, and visually stunning Admin Dashboard built with **Next.js 16**, **React 19**, **Tailwind CSS v4**, **Redux Toolkit**, and **Next Themes**.
 
-![Next.js](https://img.shields.io/badge/Next.js-16.2-black?style=for-the-badge&logo=next.js)
-![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css)
-![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-2.0-764ABC?style=for-the-badge&logo=redux)
-
 ---
 
 ## ✨ Features
@@ -33,24 +27,6 @@ A high-performance, responsive, and visually stunning Admin Dashboard built with
 | **[Lucide React](https://lucide.dev/)** | Clean & modern icon set |
 | **[Next Themes](https://github.com/pacocoursey/next-themes)** | System-aware dark mode support |
 | **[Sonner](https://sonner.emilkowal.si/)** | Smooth toast notifications |
-
----
-
-## 📁 Project Structure
-
-```text
-src/
-├── app/                  # Next.js App Router (pages & layouts)
-├── components/           # Reusable UI & Layout Components
-│   ├── dashboard/        # Dashboard specific components
-│   │   ├── navbar.tsx    # Header navbar with search, theme & profile
-│   │   └── sidebar.tsx   # Collapsible main navigation sidebar
-│   └── ui/               # Primitive base components
-├── lib/                  # Utilities & Redux Store setup
-│   ├── redux/            # Slices, store configuration & hooks
-│   └── utils.ts          # Utility functions (cn helper)
-└── providers/            # Context & Redux Providers wrapper
-```
 
 ---
 
