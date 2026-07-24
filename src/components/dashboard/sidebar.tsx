@@ -6,18 +6,14 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
-  Send,
-  Gift,
-  Package,
-  AlertTriangle,
-  BarChart3,
-  Heart,
-  Map,
-  UserRound,
-  ShieldCheck,
-  CreditCard,
-  ScrollText,
-  Settings,
+  Users,
+  Handshake,
+  MonitorPlay,
+  Wallet,
+  FileText,
+  ShieldAlert,
+  DollarSign,
+  HeadphonesIcon,
   ChevronLeft,
   LogOut,
 } from "lucide-react";
@@ -28,18 +24,14 @@ import { toast } from "sonner";
 
 const menuItems = [
   { icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
-  { icon: Send, label: "Campaigns", href: "/campaigns" },
-  { icon: Gift, label: "Rewards", href: "/rewards" },
-  { icon: Package, label: "Products", href: "/products" },
-  { icon: AlertTriangle, label: "Reports", href: "/reports" },
-  { icon: BarChart3, label: "Analytics", href: "/analytics" },
-  { icon: Heart, label: "Donations Management", href: "/donations-management" },
-  { icon: Map, label: "Plans", href: "/plans" },
-  { icon: UserRound, label: "Admins", href: "/admins" },
-  { icon: ShieldCheck, label: "Permissions", href: "/permissions" },
-  { icon: CreditCard, label: "Billing", href: "/billing" },
-  { icon: ScrollText, label: "Audit Logs", href: "/audit-logs" },
-  { icon: Settings, label: "Settings", href: "/settings" },
+  { icon: Users, label: "Users", href: "/users" },
+  { icon: Handshake, label: "Allies", href: "/allies" },
+  { icon: MonitorPlay, label: "Sessions", href: "/sessions" },
+  { icon: Wallet, label: "Wallet & Payments", href: "/wallet-payments" },
+  { icon: FileText, label: "Payout Statements", href: "/payout-statements" },
+  { icon: ShieldAlert, label: "Fraud & Abuse", href: "/fraud-abuse" },
+  { icon: DollarSign, label: "Pricing & Rates", href: "/pricing-rates" },
+  { icon: HeadphonesIcon, label: "Support", href: "/support" },
 ];
 
 export default function Sidebar() {
@@ -83,17 +75,24 @@ export default function Sidebar() {
               )}
               onClick={() => !isSidebarOpen && dispatch(toggleSidebar())}
             >
-              <div className="relative h-12 w-full cursor-pointer">
-                <Image
-                  src="/images/logo.png"
-                  alt="Logo"
-                  fill
-                  className={cn(
-                    "object-contain transition-all duration-300",
-                    isSidebarOpen ? "object-left" : "object-center scale-125",
-                  )}
-                  priority
-                />
+              <div className="flex items-center gap-2 h-12 w-full">
+                {/* Logo Image */}
+                <div className="relative h-10 w-10 shrink-0">
+                  <Image
+                    src="/images/logo.png"
+                    alt="Logo"
+                    fill
+                    sizes="40px"
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+                {/* Brand Name - only visible when sidebar is open */}
+                {isSidebarOpen && (
+                  <h1 className="text-xl font-bold truncate whitespace-nowrap">
+                    Allies Admin
+                  </h1>
+                )}
               </div>
             </div>
             <button
@@ -153,7 +152,7 @@ export default function Sidebar() {
                 console.log("Logging out...");
               }}
               className={cn(
-                "flex items-center gap-3 px-3 py-2.5 rounded-lg w-full text-muted-foreground hover:bg-rose-50 hover:text-rose-600 transition-all duration-200 group cursor-pointer",
+                "flex items-center gap-3 px-3 py-2.5 rounded-lg w-full text-muted-foreground hover:bg-rose-50 hover:text-rose-600 dark:hover:bg-rose-950/40 dark:hover:text-rose-400 transition-all duration-200 group cursor-pointer",
               )}
             >
               <LogOut className="w-5 h-5 shrink-0 group-hover:scale-110 transition-transform" />
